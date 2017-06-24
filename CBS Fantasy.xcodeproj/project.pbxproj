@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */; };
 		8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459601EFEE03200C14FE9 /* Main.storyboard */; };
-		8D8459641EFEE03200C14FE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459631EFEE03200C14FE9 /* Assets.xcassets */; };
+		8D8459641EFEE03200C14FE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459631EFEE03200C14FE9 /* Info.plist */; };
 		8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */; };
 		8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */; };
 		8D8459711EFEE2C800C14FE9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459701EFEE2C800C14FE9 /* Podfile */; };
+		8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */; };
+		8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */; };
 		C948BED55A62892F747AAF85 /* Pods_CBS_Fantasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9202E6023CC5AF078EFBCC45 /* Pods_CBS_Fantasy.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +22,14 @@
 		8D8459591EFEE03200C14FE9 /* CBS Fantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBS Fantasy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8459611EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D8459631EFEE03200C14FE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D8459631EFEE03200C14FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8459661EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8D8459681EFEE03200C14FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FrontsViewController.swift; path = "Main Front/FrontsViewController.swift"; sourceTree = "<group>"; };
+		8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewController.swift; sourceTree = "<group>"; };
 		8D8459701EFEE2C800C14FE9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8D8459721EFEE72900C14FE9 /* CBS Fantasy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBS Fantasy-Bridging-Header.h"; sourceTree = "<group>"; };
+		8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewModel.swift; sourceTree = "<group>"; };
+		8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
+		8D84597E1EFEEABE00C14FE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9202E6023CC5AF078EFBCC45 /* Pods_CBS_Fantasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBS_Fantasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BE08B11B8EC6F544A3C208 /* Pods-CBS Fantasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBS Fantasy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CBS Fantasy/Pods-CBS Fantasy.release.xcconfig"; sourceTree = "<group>"; };
 		CED855212777D2EC7D40545E /* Pods-CBS Fantasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBS Fantasy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CBS Fantasy/Pods-CBS Fantasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				8D84595B1EFEE03200C14FE9 /* CBS Fantasy */,
+				8D8459791EFEE98E00C14FE9 /* Other */,
 				8D84595A1EFEE03200C14FE9 /* Products */,
 				E6104468ECD11DE12F818214 /* Pods */,
 				11FCE0E73C8DE6FDE3978B17 /* Frameworks */,
@@ -73,15 +78,40 @@
 		8D84595B1EFEE03200C14FE9 /* CBS Fantasy */ = {
 			isa = PBXGroup;
 			children = (
+				8D84597A1EFEE9D300C14FE9 /* Models */,
+				8D8459761EFEE8B500C14FE9 /* Fronts */,
 				8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */,
 				8D8459601EFEE03200C14FE9 /* Main.storyboard */,
-				8D8459631EFEE03200C14FE9 /* Assets.xcassets */,
-				8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */,
-				8D8459681EFEE03200C14FE9 /* Info.plist */,
-				8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */,
 				8D8459701EFEE2C800C14FE9 /* Podfile */,
 			);
 			path = "CBS Fantasy";
+			sourceTree = "<group>";
+		};
+		8D8459761EFEE8B500C14FE9 /* Fronts */ = {
+			isa = PBXGroup;
+			children = (
+				8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */,
+				8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */,
+			);
+			path = Fronts;
+			sourceTree = "<group>";
+		};
+		8D8459791EFEE98E00C14FE9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8D84597E1EFEEABE00C14FE9 /* Assets.xcassets */,
+				8D8459631EFEE03200C14FE9 /* Info.plist */,
+				8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = SOURCE_ROOT;
+		};
+		8D84597A1EFEE9D300C14FE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E6104468ECD11DE12F818214 /* Pods */ = {
@@ -156,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */,
-				8D8459641EFEE03200C14FE9 /* Assets.xcassets in Resources */,
+				8D8459641EFEE03200C14FE9 /* Info.plist in Resources */,
 				8D8459711EFEE2C800C14FE9 /* Podfile in Resources */,
 				8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */,
 			);
@@ -217,8 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
+				8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AN9C8XGB3Z;
-				INFOPLIST_FILE = "CBS Fantasy/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.punitkulkarni.CBS-Fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AN9C8XGB3Z;
-				INFOPLIST_FILE = "CBS Fantasy/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.punitkulkarni.CBS-Fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";

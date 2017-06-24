@@ -11,4 +11,9 @@ import UIKit
 
 class FrontsViewController: UIViewController {
     
+    private let viewModel = FrontsViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
