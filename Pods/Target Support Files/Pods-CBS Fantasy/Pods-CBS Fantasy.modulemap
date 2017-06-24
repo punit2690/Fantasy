@@ -1,0 +1,6 @@
+framework module Pods_CBS_Fantasy {
+  umbrella header "Pods-CBS Fantasy-umbrella.h"
+
+  export *
+  module * { export * }
+}
