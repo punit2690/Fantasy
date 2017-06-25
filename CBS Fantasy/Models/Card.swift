@@ -20,8 +20,9 @@ enum CardType: String {
 
 struct Card {
     
+    let sport: SPORT
     private let type: String
-    var data: Any
+    var data = [Any]()
     var cardType: CardType {
         return CardType(rawValue: type) ?? CardType.Unknown
     }
@@ -30,7 +31,7 @@ struct Card {
         switch cardType {
             
         case CardType.Headline, CardType.PlayerVideos, CardType.Video:
-            return (data as! [Any]).count
+            return data.count
             
         case CardType.Ad, CardType.RosterTrend, CardType.PlayerUpdates:
             return 1
@@ -39,6 +40,10 @@ struct Card {
             return 0
         }
     }
+    var source: String {
+        return "CBS Fantasy \(sport.rawValue.capitalized)"
+    }
+    
     var title: String? {
         
         switch cardType {
@@ -48,7 +53,16 @@ struct Card {
             case CardType.PlayerVideos:
                 return "Player News Videos"
             case CardType.Video:
-                return "Fantasy Football Today Videos"
+                switch sport {
+                    case .Basketball:
+                        return "Fantasy Basketball Today Videos"
+                    case .Baseball:
+                        return "Fantasy Baseball Today Videos"
+                    case .Football:
+                        return "Fantasy Football Today Videos"
+                    case .Hockey:
+                        return "Fantasy Hockey Today Videos"
+                }
             case CardType.RosterTrend:
                 return "Roster Trends"
             case CardType.PlayerUpdates:
@@ -77,13 +91,14 @@ struct Card {
         }
     }
     
-    init?(from cardDict: [String : Any]) {
+    init?(from cardDict: [String : Any], for sport: SPORT) {
         
-        guard let cardData = cardDict["data"],
-            let type = cardDict["type"] as? String  else { return nil }
+        guard let type = cardDict["type"] as? String  else { return nil }
         self.type = type
+        let cardData = cardDict["data"]
         self.data = []
-        
+        self.sport = sport
+
         switch type {
             
             case CardType.Headline.rawValue:
@@ -96,7 +111,7 @@ struct Card {
                     }
                     self.data = headlines
                 } else {
-                    self.data = []
+                    return nil
                 }
                 break
             
@@ -108,9 +123,10 @@ struct Card {
                             rosterTrends.append(rosterTrend)
                         }
                     }
+                    guard rosterTrends.count > 0 else { return nil }
                     self.data = rosterTrends
                 } else {
-                    self.data = []
+                    return nil
                 }
                 break
             
@@ -125,7 +141,7 @@ struct Card {
                         }
                         self.data = videos
                     } else {
-                        self.data = []
+                        return nil
                     }
                 }
                 break
@@ -141,14 +157,13 @@ struct Card {
                         }
                         self.data = videos
                     } else {
-                        self.data = []
+                        return nil
                     }
                 }
                 break
             
             case CardType.Ad.rawValue:
-                self.data = []
-                break
+                return
             
             case CardType.PlayerUpdates.rawValue:
                 var updates = [PlayerUpdate]()
@@ -160,12 +175,16 @@ struct Card {
                     }
                     self.data = updates
                 } else {
-                    self.data = []
+                    return nil
                 }
                 break
             
             default:
                 break
+        }
+        
+        if data.count == 0 && cardType != .Ad {
+            return nil
         }
     }
 }

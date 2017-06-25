@@ -44,7 +44,7 @@ class FrontsViewModel {
                                 if let cards = app_home["cards"] as? [[String : Any]] {
                                     var cardArray = [Card]()
                                     for card in cards {
-                                        if let card = Card(from: card) {
+                                        if let card = Card(from: card, for: self.selectedSport) {
                                             cardArray.append(card)
                                         }
                                     }
@@ -68,6 +68,9 @@ class FrontsViewModel {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "carouselTableViewCell") as! CarouselTableViewCell
                 cell.setup(for: self, index: index, title: card.title!.capitalized, allButtonTitle: card.allButtonTitle?.uppercased())
                 return cell
+            case .Ad:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "adTableViewCell")!
+                return cell
             default:
                 return UITableViewCell()
         }
@@ -89,8 +92,8 @@ extension FrontsViewModel: CarouselTableViewCellDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0)) as! CarouselCollectionViewCell
         let cellArray = cards![rowIndex].data as! [CarouselTableViewCellProtocol]
         let cellData = cellArray[index]
-        
-        cell.setup(for: self, title: cellData.title, timestamp: cellData.timestamp, source: cellData.source, imageURL: cellData.imageURL)
+        let source = cellData.source.characters.count > 0 ? cellData.source : cards![rowIndex].source
+        cell.setup(for: self, title: cellData.title, timestamp: cellData.timestamp, source: source, imageURL: cellData.imageURL)
         return cell
     }
     

@@ -17,7 +17,13 @@ class FrontsViewController: UIViewController {
     
     weak var delegate: FrontsViewControllerDelegate?
     fileprivate var viewModel: FrontsViewModel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.tableFooterView = UIView(frame: CGRect.zero)
+            tableView.estimatedRowHeight = 300
+            tableView.rowHeight = UITableViewAutomaticDimension
+        }
+    }
     var refreshControl: UIRefreshControl!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

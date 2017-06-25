@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,7 +94,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carouselTableViewCell" rowHeight="300" id="AT4-OH-EgS" userLabel="CarouselTableViewCell" customClass="CarouselTableViewCell" customModule="CBS_Fantasy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="carouselTableViewCell" rowHeight="300" id="AT4-OH-EgS" userLabel="CarouselTableViewCell" customClass="CarouselTableViewCell" customModule="CBS_Fantasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AT4-OH-EgS" id="iEV-jw-1oe">
@@ -117,6 +118,9 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="118-kF-Z2C">
                                                     <rect key="frame" x="0.0" y="57" width="375" height="219"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="118-kF-Z2C" secondAttribute="height" multiplier="125:73" id="Eeo-3V-E3Y"/>
+                                                    </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uQf-ep-tqB">
                                                         <size key="itemSize" width="320" height="206"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -226,6 +230,27 @@
                                             <outlet property="collectionView" destination="118-kF-Z2C" id="eCY-Uz-aKC"/>
                                             <outlet property="title" destination="0UA-mU-chl" id="NcX-0C-nqg"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adTableViewCell" rowHeight="60" id="eHi-vs-GvX">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHi-vs-GvX" id="c6w-cF-TmL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ The Advertisement goes here $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-fW-5n5">
+                                                    <rect key="frame" x="59" y="20" width="256" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iy3-fW-5n5" firstAttribute="centerY" secondItem="c6w-cF-TmL" secondAttribute="centerY" id="GXz-pn-4Ms"/>
+                                                <constraint firstItem="iy3-fW-5n5" firstAttribute="centerX" secondItem="c6w-cF-TmL" secondAttribute="centerX" id="iXX-mP-7ey"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
