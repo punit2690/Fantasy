@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
+		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
 		1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6B81EFF24B30073BDF4 /* CardType.swift */; };
 		1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */; };
 		1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */; };
@@ -16,6 +18,7 @@
 		1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */; };
 		1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */; };
 		1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6CA1EFFF2900073BDF4 /* Author.swift */; };
+		1F98F6CD1F0004FA0073BDF4 /* FrontsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6CC1F0004FA0073BDF4 /* FrontsContainerViewController.swift */; };
 		8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */; };
 		8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459601EFEE03200C14FE9 /* Main.storyboard */; };
 		8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */; };
@@ -26,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		1F98F6B81EFF24B30073BDF4 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCard.swift; sourceTree = "<group>"; };
 		1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 		1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNewsVideo.swift; sourceTree = "<group>"; };
 		1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUpdate.swift; sourceTree = "<group>"; };
 		1F98F6CA1EFFF2900073BDF4 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		1F98F6CC1F0004FA0073BDF4 /* FrontsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontsContainerViewController.swift; sourceTree = "<group>"; };
 		8D8459591EFEE03200C14FE9 /* CBS Fantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBS Fantasy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8459611EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +77,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F3454761F00188500E7F0C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8D8459501EFEE03200C14FE9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +109,7 @@
 		8D84595B1EFEE03200C14FE9 /* CBS Fantasy */ = {
 			isa = PBXGroup;
 			children = (
+				1F3454761F00188500E7F0C0 /* Views */,
 				8D84597A1EFEE9D300C14FE9 /* Models */,
 				8D8459761EFEE8B500C14FE9 /* Fronts */,
 				8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */,
@@ -108,6 +123,8 @@
 			children = (
 				8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */,
 				8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */,
+				1F98F6CC1F0004FA0073BDF4 /* FrontsContainerViewController.swift */,
+				1F3454741F000A8300E7F0C0 /* MenuViewController.swift */,
 			);
 			path = Fronts;
 			sourceTree = "<group>";
@@ -271,17 +288,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */,
+				1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
 				1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
 				1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */,
 				1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */,
 				1F98F6C51EFFE3F40073BDF4 /* BannerAd.swift in Sources */,
+				1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */,
 				1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */,
 				1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */,
 				1F98F6C31EFFDBD90073BDF4 /* RosterTrend.swift in Sources */,
 				1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */,
 				8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */,
+				1F98F6CD1F0004FA0073BDF4 /* FrontsContainerViewController.swift in Sources */,
 				1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

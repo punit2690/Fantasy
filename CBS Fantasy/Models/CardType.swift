@@ -8,10 +8,23 @@
 
 import Foundation
 
-struct CardType {
+enum CardType: String {
+    case Headline = "headlines"
+    case RosterTrend = "roster_trends"
+    case PlayerVideos = "player_news_videos"
+    case Video = "vod"
+    case PlayerUpdates = "player_updates"
+    case Ad = "banner_ad"
+    case Unknown = "unknown"
+}
+
+struct Card {
     
-    let type: String
+    private let type: String
     var data: Any
+    var cardType: CardType {
+        return CardType(rawValue: type) ?? CardType.Unknown
+    }
     
     init?(from cardDict: [String : Any]) {
         
@@ -22,7 +35,7 @@ struct CardType {
         
         switch type {
             
-            case "headlines":
+            case CardType.Headline.rawValue:
                 var headlines = [HeadlineCard]()
                 if let headlineJSONArray = cardData as? [[String : Any]] {
                     for headlineJSON in headlineJSONArray {
@@ -36,7 +49,7 @@ struct CardType {
                 }
                 break
             
-            case "roster_trends":
+            case CardType.RosterTrend.rawValue:
                 var rosterTrends = [RosterTrend]()
                 if let rosterTrendsJSONArray = cardData as? [[String : Any]] {
                     for rosterDict in rosterTrendsJSONArray {
@@ -50,7 +63,7 @@ struct CardType {
                 }
                 break
             
-            case "player_news_videos":
+            case CardType.PlayerVideos.rawValue:
                 var videos = [PlayerNewsVideo]()
                 if let playerNewsVideoJSON = cardData as? [String : Any] {
                     if let playerNewsVideoJSONs = playerNewsVideoJSON["videos"] as? [[String : Any]] {
@@ -66,7 +79,7 @@ struct CardType {
                 }
                 break
             
-            case "vod":
+            case CardType.Video.rawValue:
                 var videos = [Video]()
                 if let videoJSON = cardData as? [String : Any] {
                     if let videoJSONs = videoJSON["videos"] as? [[String : Any]] {
@@ -82,11 +95,11 @@ struct CardType {
                 }
                 break
             
-            case "banner_ad":
+            case CardType.Ad.rawValue:
                 self.data = []
                 break
             
-            case "player_updates":
+            case CardType.PlayerUpdates.rawValue:
                 var updates = [PlayerUpdate]()
                 if let playerUpdatesJSONArray = cardData as? [[String : Any]] {
                     for update in playerUpdatesJSONArray {
