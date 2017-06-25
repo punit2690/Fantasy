@@ -10,7 +10,8 @@
 		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
 		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
 		1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */; };
-		1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6B81EFF24B30073BDF4 /* CardType.swift */; };
+		1F34547C1F00597600E7F0C0 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34547B1F00597600E7F0C0 /* TimeAgo.swift */; };
+		1F98F6B91EFF24B30073BDF4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6B81EFF24B30073BDF4 /* Card.swift */; };
 		1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */; };
 		1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */; };
 		1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C01EFF843B0073BDF4 /* Player.swift */; };
@@ -33,7 +34,8 @@
 		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = View/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
-		1F98F6B81EFF24B30073BDF4 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		1F34547B1F00597600E7F0C0 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
+		1F98F6B81EFF24B30073BDF4 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCard.swift; sourceTree = "<group>"; };
 		1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		1F98F6C01EFF843B0073BDF4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */,
-				1F98F6B81EFF24B30073BDF4 /* CardType.swift */,
+				1F98F6B81EFF24B30073BDF4 /* Card.swift */,
 				1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */,
 				1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */,
 				1F98F6C01EFF843B0073BDF4 /* Player.swift */,
@@ -155,6 +157,7 @@
 				1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */,
 				1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */,
 				1F98F6CA1EFFF2900073BDF4 /* Author.swift */,
+				1F34547B1F00597600E7F0C0 /* TimeAgo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,8 +295,9 @@
 			files = (
 				8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */,
 				1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */,
+				1F34547C1F00597600E7F0C0 /* TimeAgo.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
-				1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */,
+				1F98F6B91EFF24B30073BDF4 /* Card.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
 				1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */,
 				1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */,

@@ -8,14 +8,22 @@
 
 import Foundation
 
-struct HeadlineCard {
+struct HeadlineCard: CarouselTableViewCellProtocol {
     
     let id: String
     let imageSources: [ImageSource]
     let synopsis: String
-    let timeStamp: Date
+    let timestamp: Date
     let author: String
     let title: String
+    
+    var source: String {
+        return author
+    }
+    
+    var imageURL: String {
+        return imageSources.first?.source ?? ""
+    }
     
     init?(from headlineDict: [String : Any]) {
         
@@ -27,7 +35,7 @@ struct HeadlineCard {
             let timestamp = Double(timestampString),
             let imageSources = headlineDict["photos"] as? [[String : Any]] else { return nil }
         
-        self.timeStamp = Date(timeIntervalSince1970: timestamp)
+        self.timestamp = Date(timeIntervalSince1970: timestamp)
         self.id = id
         self.synopsis = synopsis
         self.author = author

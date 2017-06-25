@@ -21,16 +21,22 @@ class FrontsViewModel {
         }
     }
     private var delegate: FrontsViewModelDelegate
-    
-    init(delegate: FrontsViewModelDelegate) {
-        self.delegate = delegate
-        initFrontsDataLoad()
+    var selectedSport: SPORT {
+        didSet {
+            beginFrontsDataLoad()
+        }
     }
     
-    func initFrontsDataLoad() {
+    init(delegate: FrontsViewModelDelegate, selectedSport: SPORT) {
+        self.delegate = delegate
+        self.selectedSport = selectedSport
+        beginFrontsDataLoad()
+    }
+    
+    func beginFrontsDataLoad() {
         
-        DispatchQueue.global(qos: .default).async {
-            let dataTask = URLSession.shared.dataTask(with: URL(string: frontsURL)!, completionHandler: { (responseObject, response, error) in
+        DispatchQueue.global(qos: .default).async { [unowned self] in
+            let dataTask = URLSession.shared.dataTask(with: URL(string: frontURL(for: self.selectedSport))!, completionHandler: { (responseObject, response, error) in
                 if let recievedData = responseObject {
                     if let json = try! JSONSerialization.jsonObject(with: recievedData, options: .allowFragments) as? [String : Any] {
                         if let body = json["body"] as? [String : Any] {
@@ -80,7 +86,11 @@ extension FrontsViewModel: CarouselTableViewCellDelegate {
     }
     
     func cellForItem(at index: Int, for collectionView: UICollectionView, on rowIndex: Int) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0)) as! CarouselCollectionViewCell
+        let cellArray = cards![rowIndex].data as! [CarouselTableViewCellProtocol]
+        let cellData = cellArray[index]
+        
+        cell.setup(for: self, title: cellData.title, timestamp: cellData.timestamp, source: cellData.source, imageURL: cellData.imageURL)
         return cell
     }
     

@@ -10,12 +10,16 @@ import Foundation
 
 typealias PlayerNewsVideo = Video
 
-struct Video {
+struct Video: CarouselTableViewCellProtocol {
     
-    let mediumThumbUrl: String
+    let imageURL: String
     let title: String
-    let startTime: Date
+    let timestamp: Date
     let description: String
+    
+    var source: String {
+        return ""
+    }
     
     init?(from playerNewsVideoDict: [String : Any]) {
         
@@ -25,8 +29,8 @@ struct Video {
               let description  = playerNewsVideoDict["description"] as? String,
               let timeInterval = Double(timeString) else { return nil }
 
-        self.startTime = Date(timeIntervalSince1970: timeInterval)
-        self.mediumThumbUrl = medUrl
+        self.timestamp = Date(timeIntervalSince1970: timeInterval)
+        self.imageURL = medUrl
         self.title = title
         self.description = description
     }

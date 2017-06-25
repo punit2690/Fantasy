@@ -18,19 +18,29 @@ class FrontsViewController: UIViewController {
     weak var delegate: FrontsViewControllerDelegate?
     fileprivate var viewModel: FrontsViewModel!
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl: UIRefreshControl!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.viewModel = FrontsViewModel(delegate: self)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Basketball)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.viewModel = FrontsViewModel(delegate: self)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Basketball)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    func refresh(sender:AnyObject) {
+        //  your code to refresh tableView
+        viewModel.beginFrontsDataLoad()
     }
     
     @IBAction func didTapHamburgerMenu(_ sender: Any) {
@@ -41,6 +51,7 @@ class FrontsViewController: UIViewController {
 extension FrontsViewController: FrontsViewModelDelegate {
     func reloadData() {
         DispatchQueue.main.async { [weak self] in
+            self?.refreshControl.endRefreshing()
             self?.tableView.reloadData()
         }
     }

@@ -21,6 +21,12 @@ class CarouselTableViewCell: UITableViewCell {
     @IBOutlet weak var allButton: UIButton!
     fileprivate weak var delegate: CarouselTableViewCellDelegate?
     var rowIndex: Int = -1
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.8, height: self.frame.size.width * 0.8 * 206.0/320.0)
+    }
     
     func setup(for delegate: CarouselTableViewCellDelegate, index: Int, title: String, allButtonTitle: String?) {
         self.delegate = delegate
@@ -35,6 +41,20 @@ class CarouselTableViewCell: UITableViewCell {
     }
 
     @IBAction func allButtonAction(_ sender: Any) {
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        title.text = ""
+        allButton.setTitle("", for: .normal)
+        rowIndex = -1
+        delegate = nil
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.8, height: self.frame.size.width * 0.8 * 206.0/320.0)
+        collectionView.reloadData()
     }
 }
 
@@ -58,4 +78,6 @@ extension CarouselTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectItem(at: indexPath.item, on: self.rowIndex)
     }
+    
+    
 }
