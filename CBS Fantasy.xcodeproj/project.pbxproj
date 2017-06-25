@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6B81EFF24B30073BDF4 /* CardType.swift */; };
+		1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */; };
+		1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */; };
+		1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C01EFF843B0073BDF4 /* Player.swift */; };
+		1F98F6C31EFFDBD90073BDF4 /* RosterTrend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C21EFFDBD90073BDF4 /* RosterTrend.swift */; };
+		1F98F6C51EFFE3F40073BDF4 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C41EFFE3F40073BDF4 /* BannerAd.swift */; };
+		1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */; };
+		1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */; };
+		1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6CA1EFFF2900073BDF4 /* Author.swift */; };
 		8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */; };
 		8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459601EFEE03200C14FE9 /* Main.storyboard */; };
-		8D8459641EFEE03200C14FE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459631EFEE03200C14FE9 /* Info.plist */; };
 		8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */; };
 		8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */; };
-		8D8459711EFEE2C800C14FE9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8D8459701EFEE2C800C14FE9 /* Podfile */; };
 		8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */; };
 		8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */; };
 		C948BED55A62892F747AAF85 /* Pods_CBS_Fantasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9202E6023CC5AF078EFBCC45 /* Pods_CBS_Fantasy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F98F6B81EFF24B30073BDF4 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCard.swift; sourceTree = "<group>"; };
+		1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		1F98F6C01EFF843B0073BDF4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1F98F6C21EFFDBD90073BDF4 /* RosterTrend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTrend.swift; sourceTree = "<group>"; };
+		1F98F6C41EFFE3F40073BDF4 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNewsVideo.swift; sourceTree = "<group>"; };
+		1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUpdate.swift; sourceTree = "<group>"; };
+		1F98F6CA1EFFF2900073BDF4 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		8D8459591EFEE03200C14FE9 /* CBS Fantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBS Fantasy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8459611EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D8459631EFEE03200C14FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8459661EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewController.swift; sourceTree = "<group>"; };
-		8D8459701EFEE2C800C14FE9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		8D8459701EFEE2C800C14FE9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		8D8459721EFEE72900C14FE9 /* CBS Fantasy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBS Fantasy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewModel.swift; sourceTree = "<group>"; };
 		8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
@@ -64,6 +80,7 @@
 				E6104468ECD11DE12F818214 /* Pods */,
 				11FCE0E73C8DE6FDE3978B17 /* Frameworks */,
 				8D8459721EFEE72900C14FE9 /* CBS Fantasy-Bridging-Header.h */,
+				8D8459701EFEE2C800C14FE9 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +99,6 @@
 				8D8459761EFEE8B500C14FE9 /* Fronts */,
 				8D84595C1EFEE03200C14FE9 /* AppDelegate.swift */,
 				8D8459601EFEE03200C14FE9 /* Main.storyboard */,
-				8D8459701EFEE2C800C14FE9 /* Podfile */,
 			);
 			path = "CBS Fantasy";
 			sourceTree = "<group>";
@@ -110,6 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */,
+				1F98F6B81EFF24B30073BDF4 /* CardType.swift */,
+				1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */,
+				1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */,
+				1F98F6C01EFF843B0073BDF4 /* Player.swift */,
+				1F98F6C21EFFDBD90073BDF4 /* RosterTrend.swift */,
+				1F98F6C41EFFE3F40073BDF4 /* BannerAd.swift */,
+				1F98F6C61EFFE4C30073BDF4 /* PlayerNewsVideo.swift */,
+				1F98F6C81EFFF1A40073BDF4 /* PlayerUpdate.swift */,
+				1F98F6CA1EFFF2900073BDF4 /* Author.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,8 +211,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */,
-				8D8459641EFEE03200C14FE9 /* Info.plist in Resources */,
-				8D8459711EFEE2C800C14FE9 /* Podfile in Resources */,
 				8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,8 +272,17 @@
 			files = (
 				8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
+				1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
+				1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */,
+				1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */,
+				1F98F6C51EFFE3F40073BDF4 /* BannerAd.swift in Sources */,
+				1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */,
+				1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */,
+				1F98F6C31EFFDBD90073BDF4 /* RosterTrend.swift in Sources */,
+				1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */,
 				8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */,
+				1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,12 +419,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AN9C8XGB3Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.punitkulkarni.CBS-Fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBS Fantasy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -405,11 +438,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AN9C8XGB3Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.punitkulkarni.CBS-Fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBS Fantasy-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
