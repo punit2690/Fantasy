@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
 		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
+		1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */; };
 		1F98F6B91EFF24B30073BDF4 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6B81EFF24B30073BDF4 /* CardType.swift */; };
 		1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */; };
 		1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = View/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F98F6B81EFF24B30073BDF4 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		1F98F6BA1EFF27AC0073BDF4 /* HeadlineCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCard.swift; sourceTree = "<group>"; };
 		1F98F6BC1EFF2AC00073BDF4 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */,
+				1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1F98F6C51EFFE3F40073BDF4 /* BannerAd.swift in Sources */,
 				1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */,
 				1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */,
+				1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */,
 				1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */,
 				1F98F6C31EFFDBD90073BDF4 /* RosterTrend.swift in Sources */,
 				1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */,

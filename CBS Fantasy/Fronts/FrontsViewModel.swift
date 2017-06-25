@@ -9,11 +9,21 @@
 import Foundation
 import UIKit
 
+protocol FrontsViewModelDelegate: class {
+    func reloadData()
+}
+
 class FrontsViewModel {
     
-    private var cards: [Card]?
+    fileprivate var cards: [Card]? {
+        didSet {
+            self.delegate.reloadData()
+        }
+    }
+    private var delegate: FrontsViewModelDelegate
     
-    init() {
+    init(delegate: FrontsViewModelDelegate) {
+        self.delegate = delegate
         initFrontsDataLoad()
     }
     
@@ -46,10 +56,11 @@ class FrontsViewModel {
     func cellForCard(at index: Int, for tableView: UITableView) -> UITableViewCell {
         
         guard cards != nil && index < cards!.count else { return UITableViewCell() }
-        
-        switch cards![index].cardType {
-            case .Headline:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "carouselTableViewCell")!
+        let card = cards![index]
+        switch card.cardType {
+            case .Headline, .PlayerVideos, .Video:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "carouselTableViewCell") as! CarouselTableViewCell
+                cell.setup(for: self, index: index, title: card.title!.capitalized, allButtonTitle: card.allButtonTitle?.uppercased())
                 return cell
             default:
                 return UITableViewCell()
@@ -58,5 +69,22 @@ class FrontsViewModel {
     
     func numberOfRows() -> Int {
         return cards?.count ?? 0
+    }
+}
+
+extension FrontsViewModel: CarouselTableViewCellDelegate {
+    
+    func numberOfCells(for rowIndex: Int) -> Int {
+        let card = cards![rowIndex]
+        return card.cardCount
+    }
+    
+    func cellForItem(at index: Int, for collectionView: UICollectionView, on rowIndex: Int) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0))
+        return cell
+    }
+    
+    func didSelectItem(at index: Int, on rowIndex: Int) {
+        
     }
 }

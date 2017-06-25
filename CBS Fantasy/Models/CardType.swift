@@ -25,6 +25,57 @@ struct Card {
     var cardType: CardType {
         return CardType(rawValue: type) ?? CardType.Unknown
     }
+    var cardCount: Int {
+        
+        switch cardType {
+            
+        case CardType.Headline, CardType.PlayerVideos, CardType.Video:
+            return (data as! [Any]).count
+            
+        case CardType.Ad, CardType.RosterTrend, CardType.PlayerUpdates:
+            return 1
+            
+        default:
+            return 0
+        }
+    }
+    var title: String? {
+        
+        switch cardType {
+            
+            case CardType.Headline:
+                return "Fantasy Advice"
+            case CardType.PlayerVideos:
+                return "Player News Videos"
+            case CardType.Video:
+                return "Fantasy Football Today Videos"
+            case CardType.RosterTrend:
+                return "Roster Trends"
+            case CardType.PlayerUpdates:
+                return "Player News"
+                
+            default:
+            return nil
+        }
+    }
+    
+    var allButtonTitle: String? {
+        
+        switch cardType {
+            
+            case CardType.Headline:
+                return "All Advice >"
+            case CardType.Video:
+                return "All Videos >"
+            case CardType.RosterTrend:
+                return "All Trends >"
+            case CardType.PlayerUpdates:
+                return "All News >"
+                
+            default:
+                return ""
+        }
+    }
     
     init?(from cardDict: [String : Any]) {
         

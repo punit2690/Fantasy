@@ -9,15 +9,25 @@
 import Foundation
 import UIKit
 
-protocol FrontsViewControllerDelegate {
+protocol FrontsViewControllerDelegate: class {
     func didTapHamburgerMenu()
 }
 
 class FrontsViewController: UIViewController {
     
-    var delegate: FrontsViewControllerDelegate?
-    fileprivate let viewModel = FrontsViewModel()
+    weak var delegate: FrontsViewControllerDelegate?
+    fileprivate var viewModel: FrontsViewModel!
     @IBOutlet weak var tableView: UITableView!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.viewModel = FrontsViewModel(delegate: self)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.viewModel = FrontsViewModel(delegate: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +35,14 @@ class FrontsViewController: UIViewController {
     
     @IBAction func didTapHamburgerMenu(_ sender: Any) {
         delegate?.didTapHamburgerMenu()
+    }
+}
+
+extension FrontsViewController: FrontsViewModelDelegate {
+    func reloadData() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 }
 
