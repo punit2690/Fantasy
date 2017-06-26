@@ -15,6 +15,13 @@ protocol FrontsViewControllerDelegate: class {
 
 class FrontsViewController: UIViewController {
     
+    var selectedSport = SPORT.Baseball {
+        didSet {
+            if viewModel != nil {
+                viewModel.selectedSport = selectedSport
+            }
+        }
+    }
     weak var delegate: FrontsViewControllerDelegate?
     fileprivate var viewModel: FrontsViewModel!
     @IBOutlet weak var tableView: UITableView! {
@@ -28,12 +35,12 @@ class FrontsViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Baseball)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: selectedSport)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Baseball)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: selectedSport)
     }
     
     override func viewDidLoad() {

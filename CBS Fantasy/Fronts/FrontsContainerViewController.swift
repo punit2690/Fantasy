@@ -31,6 +31,7 @@ class FrontsContainerViewController: UIViewController {
             
             case "embedSideMenu":
                 menuViewController = (segue.destination as! UINavigationController).topViewController as? MenuViewController
+                menuViewController?.delegate = self
                 break
             
             default:
@@ -50,6 +51,13 @@ class FrontsContainerViewController: UIViewController {
                 self.view.layoutIfNeeded()
             })
         }
+    }
+}
+
+extension FrontsContainerViewController: MenuViewControllerDelegate {
+    func didSelectSport(sport: SPORT) {
+        frontsViewController?.selectedSport = sport
+        toggleMenu()
     }
 }
 
