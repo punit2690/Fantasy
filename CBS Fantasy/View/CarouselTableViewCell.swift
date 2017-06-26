@@ -25,7 +25,7 @@ class CarouselTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.8, height: self.frame.size.width * 0.8 * 206.0/320.0)
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.9, height: ((self.frame.size.width * 0.9 * 9.0/16.0) + 34.0))
     }
     
     func setup(for delegate: CarouselTableViewCellDelegate, index: Int, title: String, allButtonTitle: String?) {
@@ -53,7 +53,7 @@ class CarouselTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.8, height: self.frame.size.width * 0.8 * 206.0/320.0)
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: self.frame.size.width * 0.9, height: ((self.frame.size.width * 0.9 * 9.0/16.0) + 34.0))
         collectionView.reloadData()
     }
 }

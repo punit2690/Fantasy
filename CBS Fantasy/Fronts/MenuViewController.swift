@@ -37,6 +37,18 @@ class MenuViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let header = view as! UITableViewHeaderFooterView
+
+        header.textLabel?.textColor = UIColor(white: 1.0, alpha:0.5)
+        header.textLabel?.font = UIFont(name: "Avenir-Medium", size: 10)
+        header.textLabel?.text = "MORE FANTASY SPORTS"
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = NSTextAlignment.left
+    }
 }
 
 
