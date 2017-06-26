@@ -11,6 +11,8 @@
 		1F26AC9B1F0091F700B41264 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */; };
 		1F26AC9D1F00964A00B41264 /* RosterTableSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */; };
 		1F26AC9F1F00976A00B41264 /* RosterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */; };
+		1F26ACA21F00C3E500B41264 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F26ACA11F00C3E500B41264 /* Media.xcassets */; };
+		1F26ACA41F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */; };
 		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
 		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
 		1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */; };
@@ -39,6 +41,8 @@
 		1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterTableViewCell.swift; path = View/RosterTableViewCell.swift; sourceTree = "<group>"; };
 		1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RosterTableSectionView.xib; path = View/RosterTableSectionView.xib; sourceTree = "<group>"; };
 		1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterSectionHeaderView.swift; path = View/RosterSectionHeaderView.swift; sourceTree = "<group>"; };
+		1F26ACA11F00C3E500B41264 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerUpdatesTableViewCell.swift; path = View/PlayerUpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = View/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -63,7 +67,6 @@
 		8D8459721EFEE72900C14FE9 /* CBS Fantasy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBS Fantasy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewModel.swift; sourceTree = "<group>"; };
 		8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
-		8D84597E1EFEEABE00C14FE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9202E6023CC5AF078EFBCC45 /* Pods_CBS_Fantasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBS_Fantasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BE08B11B8EC6F544A3C208 /* Pods-CBS Fantasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBS Fantasy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CBS Fantasy/Pods-CBS Fantasy.release.xcconfig"; sourceTree = "<group>"; };
 		CED855212777D2EC7D40545E /* Pods-CBS Fantasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBS Fantasy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CBS Fantasy/Pods-CBS Fantasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 				1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */,
 				1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */,
 				1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */,
+				1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -149,9 +153,9 @@
 		8D8459791EFEE98E00C14FE9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8D84597E1EFEEABE00C14FE9 /* Assets.xcassets */,
 				8D8459631EFEE03200C14FE9 /* Info.plist */,
 				8D8459651EFEE03200C14FE9 /* LaunchScreen.storyboard */,
+				1F26ACA11F00C3E500B41264 /* Media.xcassets */,
 			);
 			path = Other;
 			sourceTree = SOURCE_ROOT;
@@ -247,6 +251,7 @@
 			files = (
 				8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */,
 				1F26AC9D1F00964A00B41264 /* RosterTableSectionView.xib in Resources */,
+				1F26ACA21F00C3E500B41264 /* Media.xcassets in Resources */,
 				8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +331,7 @@
 				1F98F6C91EFFF1A40073BDF4 /* PlayerUpdate.swift in Sources */,
 				8D84597C1EFEE9F000C14FE9 /* WebServiceAPI.swift in Sources */,
 				1F98F6CD1F0004FA0073BDF4 /* FrontsContainerViewController.swift in Sources */,
+				1F26ACA41F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift in Sources */,
 				1F98F6BB1EFF27AC0073BDF4 /* HeadlineCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AN9C8XGB3Z;
+				DEVELOPMENT_TEAM = FKR423Y6LA;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AN9C8XGB3Z;
+				DEVELOPMENT_TEAM = FKR423Y6LA;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

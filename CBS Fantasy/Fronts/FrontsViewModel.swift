@@ -76,6 +76,10 @@ class FrontsViewModel {
             cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
             return cell
             
+        case .PlayerUpdates:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "playerUpdatesTableViewCell") as! PlayerUpdatesTableViewCell
+            cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
+            return cell
             default:
                 return UITableViewCell()
         }
@@ -132,6 +136,18 @@ extension FrontsViewModel: RosterTableViewCellDelegate {
         headerView.labelView.text = rosterTrend.type
         return headerView
     }
+}
+
+extension FrontsViewModel: PlayerUpdatesTableViewCellDelegate {
     
+    func numberOfRows(for rowIndex: Int) -> Int {
+        return (cards![rowIndex].data as! [PlayerUpdate]).count
+    }
     
+    func cellForRow(at indexpath: Int, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerTableViewCell") as! PlayerTableViewCell
+        let playerUpdates = cards![rowIndex].data as! [PlayerUpdate]
+        cell.setup(with: playerUpdates[indexpath])
+        return cell
+    }
 }

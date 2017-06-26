@@ -15,6 +15,8 @@ protocol RosterTableViewCellDelegate: class {
     func viewForHeader(in section: Int, for rowIndex: Int) -> UIView
 }
 
+typealias PlayerUpdatestableViewCell = RosterTableViewCell
+
 class RosterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
