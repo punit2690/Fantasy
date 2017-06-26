@@ -71,6 +71,11 @@ class FrontsViewModel {
             case .Ad:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "adTableViewCell")!
                 return cell
+            case .RosterTrend:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "rosterTrendsCell") as! RosterTableViewCell
+            cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
+            return cell
+            
             default:
                 return UITableViewCell()
         }
@@ -100,4 +105,33 @@ extension FrontsViewModel: CarouselTableViewCellDelegate {
     func didSelectItem(at index: Int, on rowIndex: Int) {
         
     }
+}
+
+extension FrontsViewModel: RosterTableViewCellDelegate {
+    
+    func numberOfSections(for index: Int) -> Int {
+        return cards![index].data.count
+    }
+    
+    func numberOfRows(in section: Int, for rowIndex: Int) -> Int {
+        return (cards![rowIndex].data as! [RosterTrend])[section].players.count
+    }
+    
+    func cellForRow(at indexpath: IndexPath, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerTableViewCell") as! PlayerTableViewCell
+        let rosterTrends = cards![rowIndex].data as! [RosterTrend]
+        let rosterTrend = rosterTrends[indexpath.section]
+        cell.setup(with: rosterTrend.players[indexpath.row])
+        return cell
+    }
+    
+    func viewForHeader(in section: Int, for rowIndex: Int) -> UIView {
+        let headerView = Bundle.main.loadNibNamed("RosterTableSectionView", owner: nil, options: nil)?.first as! RosterSectionHeaderView
+        let rosterTrends = cards![rowIndex].data as! [RosterTrend]
+        let rosterTrend = rosterTrends[section]
+        headerView.labelView.text = rosterTrend.type
+        return headerView
+    }
+    
+    
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F26AC991F00848800B41264 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC981F00848800B41264 /* PlayerTableViewCell.swift */; };
+		1F26AC9B1F0091F700B41264 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */; };
+		1F26AC9D1F00964A00B41264 /* RosterTableSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */; };
+		1F26AC9F1F00976A00B41264 /* RosterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */; };
 		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
 		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
 		1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F26AC981F00848800B41264 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerTableViewCell.swift; path = View/PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterTableViewCell.swift; path = View/RosterTableViewCell.swift; sourceTree = "<group>"; };
+		1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RosterTableSectionView.xib; path = View/RosterTableSectionView.xib; sourceTree = "<group>"; };
+		1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterSectionHeaderView.swift; path = View/RosterSectionHeaderView.swift; sourceTree = "<group>"; };
 		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = View/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 			children = (
 				1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */,
 				1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */,
+				1F26AC981F00848800B41264 /* PlayerTableViewCell.swift */,
+				1F26AC9A1F0091F700B41264 /* RosterTableViewCell.swift */,
+				1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */,
+				1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8459671EFEE03200C14FE9 /* LaunchScreen.storyboard in Resources */,
+				1F26AC9D1F00964A00B41264 /* RosterTableSectionView.xib in Resources */,
 				8D8459621EFEE03200C14FE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,13 +308,16 @@
 			files = (
 				8D8459781EFEE90100C14FE9 /* FrontsViewModel.swift in Sources */,
 				1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */,
+				1F26AC9B1F0091F700B41264 /* RosterTableViewCell.swift in Sources */,
 				1F34547C1F00597600E7F0C0 /* TimeAgo.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
 				1F98F6B91EFF24B30073BDF4 /* Card.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
 				1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */,
 				1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */,
+				1F26AC991F00848800B41264 /* PlayerTableViewCell.swift in Sources */,
 				1F98F6C51EFFE3F40073BDF4 /* BannerAd.swift in Sources */,
+				1F26AC9F1F00976A00B41264 /* RosterSectionHeaderView.swift in Sources */,
 				1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */,
 				1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */,
 				1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */,

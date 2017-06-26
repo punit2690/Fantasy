@@ -28,12 +28,12 @@ class FrontsViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Basketball)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Baseball)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Basketball)
+        self.viewModel = FrontsViewModel(delegate: self, selectedSport: .Baseball)
     }
     
     override func viewDidLoad() {

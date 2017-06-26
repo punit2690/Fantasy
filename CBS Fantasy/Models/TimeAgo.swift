@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
     
-    // This bit taken from good folks at https://stackoverflow.com/questions/27251644/how-to-get-1-hour-ago-from-a-date-in-ios-swift
+    // This code taken from good folks at https://stackoverflow.com/questions/27251644/how-to-get-1-hour-ago-from-a-date-in-ios-swift
     
     func timeAgoFromNow(numericDates:Bool) -> String {
         let calendar = Calendar.current

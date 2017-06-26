@@ -18,6 +18,7 @@ struct Player {
     let position: String
     let diff: Int?
     let team: String
+    let photoUrl: String
     
     init?(from playerDict: [String : Any]) {
         guard let id = playerDict["id"] as? String,
@@ -26,7 +27,8 @@ struct Player {
             let fullName = playerDict["fullname"] as? String,
             let profileUrl = playerDict["profile_url"] as? String,
             let position = playerDict["position"] as? String,
-            let team = playerDict["pro_team"] as? String else { return nil }
+            let team = playerDict["pro_team"] as? String,
+            let photoUrl = playerDict["photo"] as? String else { return nil }
 
         self.diff = playerDict["diff"] as? Int
         self.id = id
@@ -36,5 +38,6 @@ struct Player {
         self.profileUrl = profileUrl
         self.position = position
         self.team = team
+        self.photoUrl = photoUrl
     }
 }
