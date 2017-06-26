@@ -10,11 +10,11 @@ import UIKit
 
 class PlayerTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var differenceLabel: UILabel!
-    @IBOutlet weak var playerNameLabel: UILabel!
-    @IBOutlet weak var playerPositionLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var playerImageView: UIImageView!
+    @IBOutlet private weak var differenceLabel: UILabel!
+    @IBOutlet private weak var playerNameLabel: UILabel!
+    @IBOutlet private weak var playerPositionLabel: UILabel!
+    @IBOutlet private weak var authorLabel: UILabel!
+    @IBOutlet private weak var playerImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

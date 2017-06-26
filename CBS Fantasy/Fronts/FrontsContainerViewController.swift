@@ -11,11 +11,11 @@ import UIKit
 
 class FrontsContainerViewController: UIViewController {
     
-    @IBOutlet weak var sideMenuViewContainer: UIView!
-    @IBOutlet weak var frontsViewContainer: UIView!
-    @IBOutlet weak var sideMenuContainerWidth: NSLayoutConstraint!
-    weak var frontsViewController: FrontsViewController?
-    weak var menuViewController: MenuViewController?
+    @IBOutlet private weak var sideMenuViewContainer: UIView!
+    @IBOutlet private weak var frontsViewContainer: UIView!
+    @IBOutlet private weak var sideMenuContainerWidth: NSLayoutConstraint!
+    fileprivate weak var frontsViewController: FrontsViewController?
+    fileprivate weak var menuViewController: MenuViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

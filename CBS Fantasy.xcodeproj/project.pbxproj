@@ -13,6 +13,8 @@
 		1F26AC9F1F00976A00B41264 /* RosterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */; };
 		1F26ACA21F00C3E500B41264 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F26ACA11F00C3E500B41264 /* Media.xcassets */; };
 		1F26ACA41F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */; };
+		1F26ACA61F016F2700B41264 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26ACA51F016F2700B41264 /* WebViewController.swift */; };
+		1F26ACA91F017F3100B41264 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26ACA81F017F3100B41264 /* UIViewController+HUD.swift */; };
 		1F3454751F000A8300E7F0C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454741F000A8300E7F0C0 /* MenuViewController.swift */; };
 		1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */; };
 		1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */; };
@@ -43,6 +45,8 @@
 		1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterSectionHeaderView.swift; path = View/RosterSectionHeaderView.swift; sourceTree = "<group>"; };
 		1F26ACA11F00C3E500B41264 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerUpdatesTableViewCell.swift; path = View/PlayerUpdatesTableViewCell.swift; sourceTree = "<group>"; };
+		1F26ACA51F016F2700B41264 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Fronts/WebViewController.swift; sourceTree = "<group>"; };
+		1F26ACA81F017F3100B41264 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
 		1F3454741F000A8300E7F0C0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1F3454771F0018CB00E7F0C0 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableViewCell.swift; path = View/CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		1F3454791F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = View/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F26ACA71F017F1400B41264 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1F26ACA81F017F3100B41264 /* UIViewController+HUD.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		1F3454761F00188500E7F0C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 				1F26AC9C1F00964A00B41264 /* RosterTableSectionView.xib */,
 				1F26AC9E1F00976A00B41264 /* RosterSectionHeaderView.swift */,
 				1F26ACA31F00CACD00B41264 /* PlayerUpdatesTableViewCell.swift */,
+				1F26ACA51F016F2700B41264 /* WebViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 		8D84595B1EFEE03200C14FE9 /* CBS Fantasy */ = {
 			isa = PBXGroup;
 			children = (
+				1F26ACA71F017F1400B41264 /* Categories */,
 				1F3454761F00188500E7F0C0 /* Views */,
 				8D84597A1EFEE9D300C14FE9 /* Models */,
 				8D8459761EFEE8B500C14FE9 /* Fronts */,
@@ -317,6 +331,7 @@
 				1F34547C1F00597600E7F0C0 /* TimeAgo.swift in Sources */,
 				8D84596F1EFEE1E800C14FE9 /* FrontsViewController.swift in Sources */,
 				1F98F6B91EFF24B30073BDF4 /* Card.swift in Sources */,
+				1F26ACA91F017F3100B41264 /* UIViewController+HUD.swift in Sources */,
 				8D84595D1EFEE03200C14FE9 /* AppDelegate.swift in Sources */,
 				1F98F6C11EFF843B0073BDF4 /* Player.swift in Sources */,
 				1F98F6BD1EFF2AC00073BDF4 /* ImageSource.swift in Sources */,
@@ -325,6 +340,7 @@
 				1F26AC9F1F00976A00B41264 /* RosterSectionHeaderView.swift in Sources */,
 				1F3454781F0018CB00E7F0C0 /* CarouselTableViewCell.swift in Sources */,
 				1F98F6C71EFFE4C30073BDF4 /* PlayerNewsVideo.swift in Sources */,
+				1F26ACA61F016F2700B41264 /* WebViewController.swift in Sources */,
 				1F34547A1F003EAC00E7F0C0 /* CarouselCollectionViewCell.swift in Sources */,
 				1F98F6CB1EFFF2900073BDF4 /* Author.swift in Sources */,
 				1F98F6C31EFFDBD90073BDF4 /* RosterTrend.swift in Sources */,
@@ -467,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = FKR423Y6LA;
+				DEVELOPMENT_TEAM = AN9C8XGB3Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,7 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = FKR423Y6LA;
+				DEVELOPMENT_TEAM = AN9C8XGB3Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

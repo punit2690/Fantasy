@@ -63,9 +63,10 @@ class FrontsViewController: UIViewController {
 
 extension FrontsViewController: FrontsViewModelDelegate {
     func reloadData() {
-        DispatchQueue.main.async { [weak self] in
-            self?.refreshControl.endRefreshing()
-            self?.tableView.reloadData()
+        DispatchQueue.main.async { [unowned self] in
+            self.refreshControl.endRefreshing()
+            self.tableView.reloadData()
+            self.tableView.setContentOffset(CGPoint(x: 0, y: self.tableView.contentInset.top * CGFloat(-1.0)), animated: false)
         }
     }
 }

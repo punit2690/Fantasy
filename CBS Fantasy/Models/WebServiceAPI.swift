@@ -17,5 +17,4 @@ enum SPORT: String {
 
 func frontURL(for sport: SPORT) -> String {
     return "http://api.cbssports.com/fantasy/mobile/league/app-home?SPORT=\(sport.rawValue)&response_format=JSON&version=3.1&access_token=&context=&league_id=dummy-league&display_size=standard&no_ads=0"
-
 }

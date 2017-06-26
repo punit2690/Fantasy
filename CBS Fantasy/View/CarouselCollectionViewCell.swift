@@ -21,12 +21,12 @@ protocol CarouselTableViewCellProtocol {
 
 class CarouselCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var gradientView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var timestampLabel: UILabel!
-    @IBOutlet weak var sourceLabel: UILabel!
-    var delegate: CarouselTableViewCellDelegate!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var gradientView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var timestampLabel: UILabel!
+    @IBOutlet private weak var sourceLabel: UILabel!
+    private var delegate: CarouselTableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +35,12 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     func setup(for delegate: CarouselTableViewCellDelegate, title: String, timestamp: Date, source: String?, imageURL: String) {
         
         self.delegate = delegate
-        imageView.image = UIImage(data: try! Data(contentsOf: URL(string: imageURL)!, options: .alwaysMapped))
+        DispatchQueue.global().async {
+            let image = UIImage(data: try! Data(contentsOf: URL(string: imageURL)!, options: .alwaysMapped))
+            DispatchQueue.main.async { [weak self] in
+                self?.imageView.image = image
+            }
+        }
         titleLabel.text = title
         timestampLabel.text = timestamp.timeAgoFromNow(numericDates: false)
         if source != nil {

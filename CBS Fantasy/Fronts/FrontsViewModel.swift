@@ -11,6 +11,8 @@ import UIKit
 
 protocol FrontsViewModelDelegate: class {
     func reloadData()
+    func showHUD()
+    func hideHUD()
 }
 
 class FrontsViewModel {
@@ -35,6 +37,7 @@ class FrontsViewModel {
     
     func beginFrontsDataLoad() {
         
+        self.delegate.showHUD()
         DispatchQueue.global(qos: .default).async { [unowned self] in
             let dataTask = URLSession.shared.dataTask(with: URL(string: frontURL(for: self.selectedSport))!, completionHandler: { (responseObject, response, error) in
                 if let recievedData = responseObject {
@@ -54,6 +57,7 @@ class FrontsViewModel {
                         }
                     }
                 }
+                self.delegate.hideHUD()
             })
             dataTask.resume()
         }
@@ -92,12 +96,12 @@ class FrontsViewModel {
 
 extension FrontsViewModel: CarouselTableViewCellDelegate {
     
-    func numberOfCells(for rowIndex: Int) -> Int {
+    func numberOfCellsForCarouselCell(for rowIndex: Int) -> Int {
         let card = cards![rowIndex]
         return card.cardCount
     }
     
-    func cellForItem(at index: Int, for collectionView: UICollectionView, on rowIndex: Int) -> UICollectionViewCell {
+    func cellForItemForCarouselCell(at index: Int, for collectionView: UICollectionView, on rowIndex: Int) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0)) as! CarouselCollectionViewCell
         let cellArray = cards![rowIndex].data as! [CarouselTableViewCellProtocol]
         let cellData = cellArray[index]
@@ -106,22 +110,22 @@ extension FrontsViewModel: CarouselTableViewCellDelegate {
         return cell
     }
     
-    func didSelectItem(at index: Int, on rowIndex: Int) {
+    func didSelectItemForCarouselCell(at index: Int, on rowIndex: Int) {
         
     }
 }
 
 extension FrontsViewModel: RosterTableViewCellDelegate {
     
-    func numberOfSections(for index: Int) -> Int {
+    func numberOfSectionsInRosterCell(for index: Int) -> Int {
         return cards![index].data.count
     }
     
-    func numberOfRows(in section: Int, for rowIndex: Int) -> Int {
+    func numberOfRowsInRosterCell(in section: Int, for rowIndex: Int) -> Int {
         return (cards![rowIndex].data as! [RosterTrend])[section].players.count
     }
     
-    func cellForRow(at indexpath: IndexPath, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
+    func cellForRowInRosterCell(at indexpath: IndexPath, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerTableViewCell") as! PlayerTableViewCell
         let rosterTrends = cards![rowIndex].data as! [RosterTrend]
         let rosterTrend = rosterTrends[indexpath.section]
@@ -129,7 +133,7 @@ extension FrontsViewModel: RosterTableViewCellDelegate {
         return cell
     }
     
-    func viewForHeader(in section: Int, for rowIndex: Int) -> UIView {
+    func viewForHeaderInRosterCell(in section: Int, for rowIndex: Int) -> UIView {
         let headerView = Bundle.main.loadNibNamed("RosterTableSectionView", owner: nil, options: nil)?.first as! RosterSectionHeaderView
         let rosterTrends = cards![rowIndex].data as! [RosterTrend]
         let rosterTrend = rosterTrends[section]
@@ -140,11 +144,11 @@ extension FrontsViewModel: RosterTableViewCellDelegate {
 
 extension FrontsViewModel: PlayerUpdatesTableViewCellDelegate {
     
-    func numberOfRows(for rowIndex: Int) -> Int {
+    func numberOfRowsInPlayerUpdates(for rowIndex: Int) -> Int {
         return (cards![rowIndex].data as! [PlayerUpdate]).count
     }
     
-    func cellForRow(at indexpath: Int, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
+    func cellForRowInPlayerUpdates(at indexpath: Int, for rowIndex: Int, from tableView: UITableView) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerTableViewCell") as! PlayerTableViewCell
         let playerUpdates = cards![rowIndex].data as! [PlayerUpdate]
         cell.setup(with: playerUpdates[indexpath])
