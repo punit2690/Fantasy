@@ -68,22 +68,26 @@ class FrontsViewModel {
         guard cards != nil && index < cards!.count else { return UITableViewCell() }
         let card = cards![index]
         switch card.cardType {
+            
             case .Headline, .PlayerVideos, .Video:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "carouselTableViewCell") as! CarouselTableViewCell
                 cell.setup(for: self, index: index, title: card.title!.capitalized, allButtonTitle: card.allButtonTitle?.uppercased())
                 return cell
+            
             case .Ad:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "adTableViewCell")!
                 return cell
-            case .RosterTrend:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "rosterTrendsCell") as! RosterTableViewCell
-            cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
-            return cell
             
-        case .PlayerUpdates:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "playerUpdatesTableViewCell") as! PlayerUpdatesTableViewCell
-            cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
-            return cell
+            case .RosterTrend:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "rosterTrendsCell") as! RosterTableViewCell
+                cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
+                return cell
+            
+            case .PlayerUpdates:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "playerUpdatesTableViewCell") as! PlayerUpdatesTableViewCell
+                cell.setup(for: self, index: index, title: card.title!, allButtonTitle: card.allButtonTitle?.uppercased())
+                return cell
+            
             default:
                 return UITableViewCell()
         }

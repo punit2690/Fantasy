@@ -18,6 +18,7 @@ class MenuViewController: UITableViewController {
     weak var delegate: MenuViewControllerDelegate?
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     

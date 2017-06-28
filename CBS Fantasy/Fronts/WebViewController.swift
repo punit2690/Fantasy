@@ -10,11 +10,7 @@ import UIKit
 
 class WebViewController: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView! {
-        didSet {
-            webView.delegate = self
-        }
-    }
+    @IBOutlet weak var webView: UIWebView!
     var urlString: String? {
         didSet {
             if isViewLoaded {
@@ -34,20 +30,5 @@ class WebViewController: UIViewController {
         guard urlString != nil,
             let url = URL(string: urlString!) else { return }
         self.webView.loadRequest(URLRequest(url: url))
-    }
-}
-
-extension WebViewController: UIWebViewDelegate {
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        hideHUD()
-    }
-    
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        //showHUD()
-    }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        hideHUD()
     }
 }
