@@ -41,20 +41,26 @@ class FrontsViewModel {
         DispatchQueue.global(qos: .default).async { [unowned self] in
             let dataTask = URLSession.shared.dataTask(with: URL(string: frontURL(for: self.selectedSport))!, completionHandler: { (responseObject, response, error) in
                 if let recievedData = responseObject {
-                    if let json = try! JSONSerialization.jsonObject(with: recievedData, options: .allowFragments) as? [String : Any] {
-                        if let body = json["body"] as? [String : Any] {
-                            if let app_home = body["app_home"] as? [String : Any] {
-                                if let cards = app_home["cards"] as? [[String : Any]] {
-                                    var cardArray = [Card]()
-                                    for card in cards {
-                                        if let card = Card(from: card, for: self.selectedSport) {
-                                            cardArray.append(card)
+                    
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: recievedData, options: .allowFragments) as? [String : Any] {
+                            if let body = json["body"] as? [String : Any] {
+                                if let app_home = body["app_home"] as? [String : Any] {
+                                    
+                                    if let cards = app_home["cards"] as? [[String : Any]] {
+                                        var cardArray = [Card]()
+                                        for card in cards {
+                                            if let card = Card(from: card, for: self.selectedSport) {
+                                                cardArray.append(card)
+                                            }
                                         }
+                                        self.cards = cardArray
                                     }
-                                    self.cards = cardArray
                                 }
                             }
                         }
+                    } catch {
+                        print("ERROR: Error parsing response data")
                     }
                 }
                 self.delegate.hideHUD()
@@ -67,6 +73,7 @@ class FrontsViewModel {
         
         guard cards != nil && index < cards!.count else { return UITableViewCell() }
         let card = cards![index]
+        
         switch card.cardType {
             
             case .Headline, .PlayerVideos, .Video:
@@ -106,6 +113,7 @@ extension FrontsViewModel: CarouselTableViewCellDelegate {
     }
     
     func cellForItemForCarouselCell(at index: Int, for collectionView: UICollectionView, on rowIndex: Int) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: IndexPath(row: index, section: 0)) as! CarouselCollectionViewCell
         let cellArray = cards![rowIndex].data as! [CarouselTableViewCellProtocol]
         let cellData = cellArray[index]

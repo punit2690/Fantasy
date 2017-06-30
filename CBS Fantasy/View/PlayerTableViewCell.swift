@@ -23,7 +23,13 @@ class PlayerTableViewCell: UITableViewCell {
     }
     
     func setup(with player: Player) {
-        playerImageView.image = UIImage(data: try! Data(contentsOf: URL(string: player.photoUrl)!, options: .alwaysMapped))
+        
+        do {
+            playerImageView.image = UIImage(data: try Data(contentsOf: URL(string: player.photoUrl)!, options: .alwaysMapped))
+        } catch {
+            print("ERROR: Error parsing image data")
+        }
+        
         if player.diff != nil {
             differenceLabel.text = "Adds up \(player.diff!)% since last week"
         } else {
@@ -35,7 +41,13 @@ class PlayerTableViewCell: UITableViewCell {
     }
     
     func setup(with update: PlayerUpdate) {
-        playerImageView.image = UIImage(data: try! Data(contentsOf: URL(string: update.player.photoUrl)!, options: .alwaysMapped))
+        
+        do {
+            playerImageView.image = UIImage(data: try Data(contentsOf: URL(string: update.player.photoUrl)!, options: .alwaysMapped))
+        } catch {
+            print("ERROR: Error parsing image data")
+        }
+        
         differenceLabel.text = update.title
         playerNameLabel.text = update.player.fullName
         playerPositionLabel.text = "\(update.player.team) - \(update.player.position)"

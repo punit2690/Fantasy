@@ -67,7 +67,7 @@
 		8D8459631EFEE03200C14FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8459661EFEE03200C14FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D84596E1EFEE1E800C14FE9 /* FrontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewController.swift; sourceTree = "<group>"; };
-		8D8459701EFEE2C800C14FE9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		8D8459701EFEE2C800C14FE9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8D8459721EFEE72900C14FE9 /* CBS Fantasy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBS Fantasy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D8459771EFEE90100C14FE9 /* FrontsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontsViewModel.swift; sourceTree = "<group>"; };
 		8D84597B1EFEE9F000C14FE9 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
@@ -214,6 +214,7 @@
 				8D8459571EFEE03200C14FE9 /* Resources */,
 				7A9046FAA86175D12B57FA15 /* [CP] Embed Pods Frameworks */,
 				58814D9826847C4D10AC2C99 /* [CP] Copy Pods Resources */,
+				1F5F368F1F06D4AA00EE0D23 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -274,6 +275,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F5F368F1F06D4AA00EE0D23 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c634f0a242b0782cdf8857d7b45f32a9d994b8f2 99b000c55af99603ad26e4c8ff4ea8af3ab1cb652d576445e15a5a54cdbdeb7e";
+		};
 		58814D9826847C4D10AC2C99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

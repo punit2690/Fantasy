@@ -36,9 +36,14 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         
         self.delegate = delegate
         DispatchQueue.global().async {
-            let image = UIImage(data: try! Data(contentsOf: URL(string: imageURL)!, options: .alwaysMapped))
-            DispatchQueue.main.async { [weak self] in
-                self?.imageView.image = image
+            
+            do {
+                let image = UIImage(data: try Data(contentsOf: URL(string: imageURL)!, options: .alwaysMapped))
+                DispatchQueue.main.async { [weak self] in
+                    self?.imageView.image = image
+                }
+            } catch {
+                print("ERROR: Error parsing image data")
             }
         }
         titleLabel.text = title

@@ -40,17 +40,19 @@ class FrontsContainerViewController: UIViewController {
     }
     
     fileprivate func toggleMenu() {
-        if sideMenuContainerWidth.constant != 200 {
+        if sideMenuContainerWidth.constant == 0 {
             self.sideMenuContainerWidth.constant = 200
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-            })
+            animateChange()
         } else {
             self.sideMenuContainerWidth.constant = 0
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-            })
+            animateChange()
         }
+    }
+    
+    private func animateChange() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 
